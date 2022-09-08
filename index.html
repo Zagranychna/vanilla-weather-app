@@ -16,7 +16,37 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-      </div><div class="weather-app">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-sm-6">
+              <input
+                type="text"
+                placeholder="Enter a city..."
+                autofocus="on"
+                autocomplete="off"
+                class="form-control"
+                id="sity-input"
+              />
+            </div>
+            <div class="col-sm-2">
+              <input
+                id="submit"
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
+            <div class="col-sm-4">
+              <input
+                id="currentloc"
+                type="submit"
+                value="Current location"
+                class="form-control btn btn-secondary shadow-sm"
+              />
+            </div>
+          </div>
+        </form>
           <div class="row">
             <div class="col-md-6">
               <h1>New York</h1>
@@ -38,6 +68,7 @@
                 </span>
               </div>
             </div>
+          </div>
           </div>
         </div>
         <small>

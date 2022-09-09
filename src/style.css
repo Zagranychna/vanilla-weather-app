@@ -6,6 +6,7 @@ h1 {
   color: #272142;
 }
 li {
+  text-transform: capitalize;
   font-weight: 500;
   margin-bottom: 5px;
   color: rgba(39, 33, 66, 0.4);

@@ -6,13 +6,15 @@ h1 {
   color: #272142;
 }
 li {
-  text-transform: capitalize;
   font-weight: 500;
   margin-bottom: 5px;
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
   line-height: 20px;
   list-style: none;
+}
+li:first-letter {
+  text-transform: capitalize;
 }
 a {
   text-decoration: none;

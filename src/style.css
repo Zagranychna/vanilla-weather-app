@@ -19,6 +19,7 @@ li:first-letter {
 a {
   text-decoration: none;
 }
+
 .btn-primary {
   background: #885df1;
   border-color: #885df1;
@@ -44,13 +45,16 @@ a {
 .temperature-container {
   margin-top: 30px;
 }
+
+.temperature-container.active:hover {
+  text-decoration: none;
+}
 .temperature {
   color: #212121;
   margin-left: 10px;
   font-weight: 700;
   font-size: 80px;
   line-height: 1;
-  text-align: center;
 }
 
 .units {

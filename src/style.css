@@ -41,6 +41,10 @@ a {
   border-radius: 10px;
   background-color: white;
 }
+li strong {
+  color: #f65282;
+  font-weight: 400;
+}
 
 .temperature-container {
   margin-top: 30px;
@@ -84,6 +88,9 @@ a {
   line-height: 1.5;
   color: #f65282;
   font-weight: 700;
+}
+li.humidity {
+  color: #f65282;
 }
 .forecast-temp-min {
   margin-left: 5px;

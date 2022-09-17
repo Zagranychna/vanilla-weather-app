@@ -32,7 +32,6 @@ function formatDay(timestamp) {
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  console.log(response.data.daily);
 
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
 
@@ -69,7 +68,7 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   let apiKey = "1266ad07b66517497b1acf79ea5a6a64";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -81,8 +80,6 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#windspeed");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-
-  celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -110,28 +107,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displyFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-now");
-  let fahrenheitTemperature = celsiusTemperature * 1.8 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displyCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-now");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displyFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displyCelsiusTemperature);
 
 search("New York");

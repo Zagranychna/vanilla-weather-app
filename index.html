@@ -20,7 +20,7 @@
         <div class="weather-app">
           <form class="search-form" id="search-form">
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-sm-9">
                 <input
                   type="text"
                   placeholder="Enter a city..."
@@ -30,20 +30,12 @@
                   id="city-input"
                 />
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-3">
                 <input
                   id="submit"
                   type="submit"
                   value="Search"
                   class="form-control btn btn-primary shadow-sm"
-                />
-              </div>
-              <div class="col-sm-4">
-                <input
-                  id="currentloc"
-                  type="submit"
-                  value="Current location"
-                  class="form-control btn btn-secondary shadow-sm"
                 />
               </div>
             </div>
@@ -62,15 +54,8 @@
             <div class="col-md-6">
               <div class="temperature-container d-flex justify-content-end">
                 <img src="src/images/cloud.png" alt="cloud" id="icon" />
-                <canvas width="52" height="52"></canvas>
                 <span class="temperature" id="temperature-now"> </span>
-                <span class="units"
-                  ><a href="#" id="celsius-link" class="active"> °C</a>|<a
-                    href="#"
-                    id="fahrenheit-link"
-                    >°F</a
-                  >
-                </span>
+                <span class="units">°C </span>
               </div>
             </div>
           </div>
